@@ -3,9 +3,23 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "test": "mocha tests/**/*.test.js"
   },
-  "keywords": ["eslint", "eslint-plugin", "interface-to-type"],
+  "keywords": ["eslint", "typescript", "eslint-plugin", "interface", "type"],
   "author": "Jan Szotkowski",
   "license": "MIT",
-  "description": ""
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/janszotkowski/eslint-plugin-interface-to-type"
+  },
+  "description": "An ESLint plugin to enforce the use of type over interface in TypeScript.",
+  "dependencies": {},
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "chai": "^5.1.2",
+    "eslint": "^8.57.1",
+    "eslint-rule-tester": "^2.0.0",
+    "mocha": "^10.8.2"
+  }
 }
