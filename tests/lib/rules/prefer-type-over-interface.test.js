@@ -12,22 +12,22 @@ const ruleTester = new RuleTester({
 ruleTester.run("prefer-type-over-interface", rule, {
     valid: [
         {
-            code: "type MyType = { field: string; };", // Správný kód
+            code: "type MyType = { field: string; };",
             filename: "test.ts",
         },
     ],
     invalid: [
         {
-            code: "interface MyInterface { field: string; }", // Chybný kód
+            code: "interface MyInterface { field: string; }",
             filename: "test.ts",
             errors: [{ message: "Interface 'MyInterface' can be replaced by a type." }],
-            output: "type MyInterface = { field: string; };", // Výstup se středníkem
+            output: "type MyInterface = { field: string; };",
         },
         {
             code: "interface MyInterface extends Parent { field: string; }",
             filename: "test.ts",
             errors: [{ message: "Interface 'MyInterface' can be replaced by a type." }],
-            output: "type MyInterface = Parent & { field: string; };", // Výstup se středníkem
+            output: "type MyInterface = Parent & { field: string; };",
         },
     ],
 });
