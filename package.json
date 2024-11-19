@@ -1,11 +1,17 @@
 {
   "name": "eslint-plugin-interface-to-type",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "scripts": {
     "test": "mocha tests/**/*.test.js"
   },
-  "keywords": ["eslint", "typescript", "eslint-plugin", "interface", "type"],
+  "keywords": [
+    "eslint",
+    "typescript",
+    "eslint-plugin",
+    "interface",
+    "type"
+  ],
   "author": "Jan Szotkowski",
   "license": "MIT",
   "repository": {
