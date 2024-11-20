@@ -23,7 +23,7 @@ Thank you for considering contributing to this project! Here are some guidelines
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-repo.git
+   git clone https://github.com/janszotkowski/eslint-plugin-interface-to-type.git
    cd eslint-plugin-interface-to-type
    ```
 
@@ -37,17 +37,11 @@ Thank you for considering contributing to this project! Here are some guidelines
    npm test
    ```
 
-4. **Lint your code:**
-   ```bash
-   npm run lint
-   ```
-
 ---
 
 ## Guidelines for Contributions
 
 - Ensure all changes are thoroughly tested.
-- Adhere to the coding style of the project (use `npm run lint`).
 - Include clear and descriptive commit messages.
 - Update documentation if your changes affect usage.
 
