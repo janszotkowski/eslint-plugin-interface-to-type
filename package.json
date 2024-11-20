@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-interface-to-type",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "index.js",
   "scripts": {
     "test": "mocha tests/**/*.test.js"
