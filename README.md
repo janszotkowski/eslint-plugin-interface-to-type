@@ -1,8 +1,8 @@
 
 # eslint-plugin-interface-to-type
 
-[![npm version](https://img.shields.io/npm/v/eslint-plugin-interface-to-type.svg)](https://www.npmjs.com/package/eslint-plugin-interface-to-type)
-[![downloads](https://img.shields.io/npm/dm/eslint-plugin-interface-to-type.svg)](https://www.npmjs.com/package/eslint-plugin-interface-to-type)
+[![npm version](https://img.shields.io/npm/v/eslint-plugin-interface-to-type.svg)](https://www.npmjs.com/package/eslint-plugin-interface-to-type)  
+[![downloads](https://img.shields.io/npm/dm/eslint-plugin-interface-to-type.svg)](https://www.npmjs.com/package/eslint-plugin-interface-to-type)  
 
 An ESLint plugin that enforces the use of `type` aliases instead of `interface` declarations in TypeScript.
 
@@ -63,6 +63,32 @@ type User = {
   role: 'admin' | 'user';
 };
 ```
+
+---
+
+## Why `interface` can be risky
+
+One of the reasons to prefer `type` over `interface` is the potential for unexpected behavior with `interface` merging. In TypeScript, when two `interface` declarations share the same name, they are automatically merged into a single declaration. This behavior, known as [Declaration Merging](https://www.typescriptlang.org/docs/handbook/declaration-merging.html), can introduce subtle bugs and unintended behaviors in your codebase.
+
+### Example of Declaration Merging
+
+```typescript
+interface User {
+  id: number;
+}
+
+interface User {
+  name: string;
+}
+
+// Resulting type
+interface User {
+  id: number;
+  name: string;
+}
+```
+
+While this behavior can sometimes be useful, it often leads to confusion and makes code harder to maintain, especially in large or collaborative projects. Using `type` avoids this risk entirely, as `type` declarations with the same name will result in a compilation error.
 
 ---
 
