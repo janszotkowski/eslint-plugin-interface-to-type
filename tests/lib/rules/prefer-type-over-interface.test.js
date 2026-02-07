@@ -1,9 +1,10 @@
 const { RuleTester } = require("eslint");
 const rule = require("../../../lib/rules/prefer-type-over-interface");
+const parser = require("@typescript-eslint/parser");
 
 const ruleTester = new RuleTester({
-    parser: require.resolve("@typescript-eslint/parser"),
-    parserOptions: {
+    languageOptions: {
+        parser: parser,
         ecmaVersion: 2020,
         sourceType: "module",
     },
